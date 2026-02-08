@@ -1,0 +1,39 @@
+[project]
+name = "finsum"
+version = "0.1.0"
+description = "Summarizes financial information for stock tickers"
+authors = [
+    {name = "tsowersby",email = "twsowersby@gmail.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.14,<3.15"
+dependencies = [
+    "numpy (>=1.24.0)",
+    "requests (>=2.28.0)",
+    "datamule (>=0.1.0)",
+    "sentence-transformers (>=2.2.0)",
+    "torch (>=2.10.0)",
+    "pytest (>=7.0.0)"
+]
+
+[dependency-groups]
+dev = [
+    "numpy (>=1.24.0)",
+    "requests (>=2.28.0)",
+    "datamule (>=0.1.0)",
+    "sentence-transformers (>=2.2.0)",
+    "torch (>=2.10.0)",
+    "pytest (>=7.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "cu118-src"
+url = "https://download.pytorch.org/whl/cu118"
+priority = "explicit"
+

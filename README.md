@@ -106,5 +106,5 @@ summarize(ticker, item, query, llm_api_key, reranker_api_key)
 ├─ 2. chunking  → Split item section into chunks
 ├─ 3. storage        → Store chunks with embeddings
 ├─ 4. retrieval         → Vector search(sentence-transformers) and Optional reranking (Zero Entropy API)
-└─ 5. LLMClient         → Generate summary (Mistral API)
+└─ 5. inference         → Generate summary (Mistral API)
 ```
