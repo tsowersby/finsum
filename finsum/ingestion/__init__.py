@@ -13,7 +13,7 @@ Usage:
     downloader = FilingDownloader()
     filing = downloader.download("MSFT")
 """
-from ingestion.downloader import (
+from .downloader import (
     FilingDownloader,
     DownloaderConfig,
     Filing,

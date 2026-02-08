@@ -3,19 +3,15 @@
 Summarize SEC 10-K filings with one function call.
 
 Usage:
-    from rag_project import summarize
+    from finsum import summarize
     
     summary = summarize(
         ticker="AAPL",
+        item="1a",
         query="What are the main risk factors?",
         llm_api_key="your-mistral-key",
     )
 """
-from facade import summarize
-from retrieval.reranker import Reranker, make_zeroentropy_rerank_fn
+from .facade import summarize
 
-__all__ = [
-    "summarize",
-    "Reranker",
-    "make_zeroentropy_rerank_fn",
-]
+__all__ = ["summarize"]

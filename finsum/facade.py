@@ -98,13 +98,13 @@ def summarize(
     
     # 5. Rerank if API key provided
     if reranker_api_key and len(results) > 1:
-        from retrieval.reranker import make_zeroentropy_rerank_fn, Reranker
+        from .retrieval.reranker import make_zeroentropy_rerank_fn, Reranker
         rerank_fn = make_zeroentropy_rerank_fn(reranker_api_key, "zerank-2")
         reranker = Reranker(rerank_fn=rerank_fn)
         results = reranker.rerank(query, results)
     
     # 6. Generate summary
-    from inference.language_model import LLMClient
+    from .inference.language_model import LLMClient
     llm = LLMClient(api_key=llm_api_key)
     
     context = "\n\n---\n\n".join([r.chunk.content for r in results])

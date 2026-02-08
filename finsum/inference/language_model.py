@@ -10,7 +10,7 @@ from __future__ import annotations
 
 import requests
 
-from config import get_llm_config
+from ..config import get_llm_config
 
 MISTRAL_ENDPOINT = "https://api.mistral.ai/v1/chat/completions"
 

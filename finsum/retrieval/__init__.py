@@ -2,8 +2,8 @@
 
 Vector search over chunks.
 """
-from retrieval.retriever import Retriever, RetrievedChunk
-from retrieval.reranker import Reranker, make_zeroentropy_rerank_fn
+from .retriever import Retriever, RetrievedChunk
+from .reranker import Reranker, make_zeroentropy_rerank_fn
 
 __all__ = [
     "Retriever",

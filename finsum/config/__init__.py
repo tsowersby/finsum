@@ -1,6 +1,6 @@
 """Configuration module."""
 
-from config.settings import (
+from .settings import (
     ChunkingConfig,
     LLMConfig,
     RetrievalConfig,

@@ -3,17 +3,22 @@
 
 import argparse
 import sys
+from pathlib import Path
+from typing import Optional
+
+# Add parent directory to path so we can import finsum
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from finsum.facade import summarize
 
 
-def get_input(prompt: str, required: bool = True) -> str:
+def get_input(prompt: str, required: bool = True) -> Optional[str]:
     """Prompt user for input."""
     value = input(prompt).strip()
     if required and not value:
         print("This field is required.")
         sys.exit(1)
-    return value if value else None
+    return value or None
 
 
 def main():

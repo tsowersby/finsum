@@ -3,7 +3,9 @@
     "chunk_size_tokens": 512,
     "chunk_overlap_tokens": 50,
     "min_chunk_chars": 50,
-    "max_chunk_chars": 2200
+    "max_chunk_chars": 2200,
+    "max_heading_chars": 100,
+    "max_heading_words": 5
   },
   "llm": {
     "model": "mistral-small-latest",
