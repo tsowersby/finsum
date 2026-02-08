@@ -14,7 +14,8 @@ dependencies = [
     "datamule (>=0.1.0)",
     "sentence-transformers (>=2.2.0)",
     "torch (>=2.10.0)",
-    "pytest (>=7.0.0)"
+    "pytest (>=7.0.0)",
+    "zeroentropy (>= 0.1)"
 ]
 
 [dependency-groups]
@@ -24,7 +25,8 @@ dev = [
     "datamule (>=0.1.0)",
     "sentence-transformers (>=2.2.0)",
     "torch (>=2.10.0)",
-    "pytest (>=7.0.0)"
+    "pytest (>=7.0.0)",
+    "zeroentropy (>= 0.1)"
 ]
 
 

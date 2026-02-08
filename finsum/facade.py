@@ -10,11 +10,10 @@ from __future__ import annotations
 
 from typing import List, Optional
 
-from chunking.datatypes import Chunk
-from chunking.pipeline import ChunkingPipeline
-from ingestion.downloader import FilingDownloader
-from storage.memory import ChunkStore
-from retrieval.retriever import Retriever
+from .chunking.pipeline import ChunkingPipeline
+from .ingestion.downloader import FilingDownloader
+from .storage.memory import ChunkStore
+from .retrieval.retriever import Retriever
 
 
 def summarize(

@@ -18,7 +18,7 @@ from __future__ import annotations
 
 from typing import Callable, List, Tuple, TYPE_CHECKING
 
-from config import get_retrieval_config
+from finsum.config import get_retrieval_config
 
 if TYPE_CHECKING:
     from retrieval.retriever import RetrievedChunk
