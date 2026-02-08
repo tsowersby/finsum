@@ -16,9 +16,9 @@ from typing import List, Optional
 
 import numpy as np
 
-from finsum.chunking.datatypes import Chunk
-from finsum.config import get_retrieval_config
-from finsum.storage.memory import ChunkStore
+from ..chunking.datatypes import Chunk
+from ..config import get_retrieval_config
+from ..storage.memory import ChunkStore
 
 
 @dataclass

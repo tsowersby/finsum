@@ -11,8 +11,8 @@ import re
 import logging
 from typing import List, Optional
 
-from finsum.chunking.datatypes import Chunk, ChunkMetadata
-from finsum.config.settings import ChunkingConfig
+from .datatypes import Chunk, ChunkMetadata
+from ..config.settings import ChunkingConfig
 
 logger = logging.getLogger(__name__)
 

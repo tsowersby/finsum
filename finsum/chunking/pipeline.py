@@ -10,10 +10,10 @@ import logging
 from dataclasses import dataclass, field
 from typing import List, Optional
 
-from finsum.config.settings import ChunkingConfig
-from finsum.chunking.block_segmenter import Block, BlockStream, segment_text
-from finsum.chunking.datatypes import Chunk, ChunkMetadata
-from finsum.chunking.text_chunker import TextChunker
+from ..config.settings import ChunkingConfig
+from .block_segmenter import Block, BlockStream, segment_text
+from .datatypes import Chunk, ChunkMetadata
+from .text_chunker import TextChunker
 
 logger = logging.getLogger(__name__)
 

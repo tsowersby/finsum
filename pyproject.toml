@@ -9,23 +9,24 @@ license = {text = "MIT"}
 readme = "README.md"
 requires-python = ">=3.14,<3.15"
 dependencies = [
-    "numpy (>=1.24.0)",
-    "requests (>=2.28.0)",
-    "datamule (>=0.1.0)",
-    "sentence-transformers (>=2.2.0)",
-    "torch (>=2.10.0)",
-    "pytest (>=7.0.0)",
-    "zeroentropy"
+    "numpy>=1.24.0",
+    "requests>=2.28.0",
+    "datamule>=0.1.0",
+    "sentence-transformers>=2.2.0",
+    "torch>=2.10.0",
+    "pytest>=7.0.0",
+    "zeroentropy",
+    "pydantic>=2.12.5,<3.0.0"
 ]
 
 [dependency-groups]
 dev = [
-    "numpy (>=1.24.0)",
-    "requests (>=2.28.0)",
-    "datamule (>=0.1.0)",
-    "sentence-transformers (>=2.2.0)",
-    "torch (>=2.10.0)",
-    "pytest (>=7.0.0)",
+    "numpy>=1.24.0",
+    "requests>=2.28.0",
+    "datamule>=0.1.0",
+    "sentence-transformers>=2.2.0",
+    "torch>=2.10.0",
+    "pytest>=7.0.0",
     "zeroentropy"
 ]
 

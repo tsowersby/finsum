@@ -18,8 +18,8 @@ from typing import Dict, List, Optional, Tuple
 
 import numpy as np
 
-from finsum.chunking.datatypes import Chunk
-from finsum.config import get_retrieval_config
+from ..chunking.datatypes import Chunk
+from ..config import get_retrieval_config
 
 
 @dataclass

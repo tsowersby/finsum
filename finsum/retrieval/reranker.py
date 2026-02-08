@@ -18,10 +18,10 @@ from __future__ import annotations
 
 from typing import Callable, List, Tuple, TYPE_CHECKING
 
-from finsum.config import get_retrieval_config
+from ..config import get_retrieval_config
 
 if TYPE_CHECKING:
-    from retrieval.retriever import RetrievedChunk
+    from .retriever import RetrievedChunk
 
 # Type for rerank function: (query, documents) -> [(index, score), ...]
 RerankFn = Callable[[str, List[str]], List[Tuple[int, float]]]
@@ -79,7 +79,7 @@ class Reranker:
         cfg = get_retrieval_config()
         top_k = top_k if top_k is not None else cfg.rerank_top_k
         
-        from retrieval.retriever import RetrievedChunk
+        from .retriever import RetrievedChunk
         
         documents = [r.chunk.content for r in results]
         
