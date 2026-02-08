@@ -14,6 +14,12 @@
 
 ## Future Improvements
 
-- [ ] Fix AI Bullshit code more
+- [ ] Actually build the damn thing into a package
+- [ ] Fix AI Bullshit code more - 99% cleaned up
 - [ ] Diagram design (not in VSCode)
 - [ ] Add local LLM support (ollama, etc)
+
+## Likely Impossible
+
+- [ ] Use more professional language. Stop cursing.
+- [ ] Extract only relevant section instead of full filing
