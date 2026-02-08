@@ -15,9 +15,10 @@
 ## Future Improvements
 
 - [ ] Actually build the damn thing into a package
-- [ ] Fix AI Bullshit code more - 99% cleaned up
+- [ ] Fix AI Bullshit code more - move buried imports, check for hardcodes, remove annoying comments, etc
 - [ ] Diagram design (not in VSCode)
 - [ ] Add local LLM support (ollama, etc)
+- [ ] Add better reranker support
 
 ## Likely Impossible
 
