@@ -76,9 +76,24 @@ Settings in `config/settings.json`:
 
 ```json
 {
-  "chunking": {"chunk_size_tokens": 512, "chunk_overlap_tokens": 50},
-  "llm": {"model": "mistral-small-latest", "temperature": 0.3, "max_tokens": 1024},
-  "retrieval": {"embedding_model": "BAAI/bge-large-en-v1.5", "top_k": 10, "rerank_top_k": 20}
+  "chunking": {
+    "chunk_size_tokens": 512,
+    "chunk_overlap_tokens": 50,
+    "min_chunk_chars": 50,
+    "max_chunk_chars": 2200
+  },
+  "llm": {
+    "model": "mistral-small-latest",
+    "temperature": 0.3,
+    "max_tokens": 1024
+  },
+  "retrieval": {
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "vector_dim": 384,
+    "top_k": 10,
+    "min_score": 0.0,
+    "rerank_top_k": 20
+  }
 }
 ```
 
@@ -86,10 +101,10 @@ Settings in `config/settings.json`:
 
 ```
 summarize(ticker, item, query, llm_api_key, reranker_api_key)
-├── FilingDownloader   - Downloads 10-K via datamule
-├── ChunkingPipeline   - Splits item section into chunks
-├── ChunkStore         - In-memory storage
-├── Retriever          - Vector search (sentence-transformers)
-├── Reranker           - Optional reranking (Zero Entropy)
-└── LLMClient          - Mistral API
+│
+├─ 1. ingestion  → Download 10-K via datamule
+├─ 2. chunking  → Split item section into chunks
+├─ 3. storage        → Store chunks with embeddings
+├─ 4. retrieval         → Vector search(sentence-transformers) and Optional reranking (Zero Entropy API)
+└─ 5. LLMClient         → Generate summary (Mistral API)
 ```
