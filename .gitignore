@@ -1,0 +1,17 @@
+.venv/
+*.pyc
+__pycache__/
+.env
+.env.*
+extras/
+docs/
+data/
+node_modules/
+dist/
+.VSCodeCounter/
+_archive/
+.vscode/
+temp_scripts/
+BUILD.md
+.pytest_cache/
+.prettier*
