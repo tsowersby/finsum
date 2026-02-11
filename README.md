@@ -1,6 +1,6 @@
 # SEC 10-K RAG Pipeline
 
-Summarize SEC 10-K filings with one function call.
+Summarize SEC 10-K filings
 
 ## Usage
 
@@ -67,7 +67,7 @@ summary = summarize(
 ## Installation
 
 ```bash
-pip install -r requirements.txt
+pip install finsum
 ```
 
 ## Configuration
@@ -95,16 +95,4 @@ Settings in `config/settings.json`:
     "rerank_top_k": 20
   }
 }
-```
-
-## Architecture
-
-```
-summarize(ticker, item, query, llm_api_key, reranker_api_key)
-│
-├─ 1. ingestion  → Download 10-K via datamule
-├─ 2. chunking  → Split item section into chunks
-├─ 3. storage        → Store chunks with embeddings
-├─ 4. retrieval         → Vector search(sentence-transformers) and Optional reranking (Zero Entropy API)
-└─ 5. inference         → Generate summary (Mistral API)
 ```
